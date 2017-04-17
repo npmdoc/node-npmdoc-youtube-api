@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/IonicaBizau/youtube-api"
-
-    >youtube-api (v2.0.8)</a>
+    <a href="https://github.com/IonicaBizau/youtube-api">youtube-api (v2.0.8)</a>
 </h1>
 <h4>A Node.JS module, which provides an object oriented wrapper for the Youtube v3 API.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.youtube-api">module youtube-api</a><ol>
 
@@ -6012,11 +6005,11 @@
     <li>description and source-code<pre class="apidocCodePre">activities.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/activities&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/activities',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6038,11 +6031,11 @@
     <li>description and source-code<pre class="apidocCodePre">activities.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/activities&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/activities',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6069,14 +6062,14 @@
 
     var authObj = null;
     switch (options.type) {
-        case &#x22;oauth&#x22;:
+        case "oauth":
             authObj = new Google.auth.OAuth2(options.client_id, options.client_secret, options.redirect_url);
             authObj.setCredentials({
                 access_token: options.access_token || options.token,
                 refresh_token: options.refresh_token
             });
             break;
-        case &#x22;key&#x22;:
+        case "key":
             authObj = options.key;
             break;
     }
@@ -6087,7 +6080,7 @@
     return authObj;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    host: &#x22;localhost&#x22;
+    host: "localhost"
   , port: 5000
 });
 
@@ -6095,7 +6088,7 @@
 // You can access the Youtube resources via OAuth2 only.
 // https://developers.google.com/youtube/v3/guides/moving_to_oauth#service_accounts
 let oauth = Youtube.<span class="apidocCodeKeywordSpan">authenticate</span>({
-    type: &#x22;oauth&#x22;
+    type: "oauth"
   , client_id: CREDENTIALS.web.client_id
   , client_secret: CREDENTIALS.web.client_secret
   , redirect_url: CREDENTIALS.web.redirect_uris[0]
@@ -6117,11 +6110,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">captions.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -6143,12 +6136,12 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">captions.download = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions/{id}&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions/{id}',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
-    pathParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
+    pathParams: ['id'],
     context: self
   };
 
@@ -6169,12 +6162,12 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">captions.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/captions&#x27;,
-    requiredParams: [&#x27;part&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/captions',
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6196,11 +6189,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">captions.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;, &#x27;videoId&#x27;],
+    requiredParams: ['part', 'videoId'],
     pathParams: [],
     context: self
   };
@@ -6222,12 +6215,12 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">captions.update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'PUT'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/captions&#x27;,
-    requiredParams: [&#x27;part&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/captions',
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6249,11 +6242,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">channelBanners.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelBanners/insert&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelBanners/insert',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/channelBanners/insert&#x27;,
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/channelBanners/insert',
     requiredParams: [],
     pathParams: [],
     context: self
@@ -6276,11 +6269,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">channelSections.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -6302,11 +6295,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">channelSections.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6328,11 +6321,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">channelSections.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6354,11 +6347,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">channelSections.update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6380,11 +6373,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">channels.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channels&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channels',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6406,11 +6399,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">channels.update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channels&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channels',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6432,11 +6425,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">commentThreads.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/commentThreads&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/commentThreads',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6458,11 +6451,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">commentThreads.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/commentThreads&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/commentThreads',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6484,11 +6477,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">commentThreads.update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/commentThreads&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/commentThreads',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6510,11 +6503,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">comments.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -6536,11 +6529,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">comments.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6562,11 +6555,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">comments.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6588,11 +6581,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">comments.markAsSpam = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments/markAsSpam&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments/markAsSpam',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -6614,11 +6607,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">comments.setModerationStatus = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments/setModerationStatus&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments/setModerationStatus',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;, &#x27;moderationStatus&#x27;],
+    requiredParams: ['id', 'moderationStatus'],
     pathParams: [],
     context: self
   };
@@ -6640,11 +6633,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">comments.update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6666,11 +6659,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">fanFundingEvents.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/fanFundingEvents&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/fanFundingEvents',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -6778,7 +6771,7 @@ opn(oauth.generateAuthUrl({
     <ul>
     <li>description and source-code<pre class="apidocCodePre">google.GoogleApis.prototype.discoverAPI = function (path, options, callback) {
   var self = this;
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     callback = options;
     options = {};
   }
@@ -6791,7 +6784,7 @@ opn(oauth.generateAuthUrl({
     }
     var ep = new Endpoint(options);
     ep.google = self; // for drive.google.transporter
-    return callback(null, Object.freeze(ep)); // create new &#x26; freeze
+    return callback(null, Object.freeze(ep)); // create new &amp; freeze
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -8098,11 +8091,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">guideCategories.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/guideCategories&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/guideCategories',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8124,11 +8117,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">i18nLanguages.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/i18nLanguages&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/i18nLanguages',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8150,11 +8143,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">i18nRegions.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/i18nRegions&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/i18nRegions',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8176,11 +8169,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveBroadcasts.bind = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts/bind&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts/bind',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;, &#x27;part&#x27;],
+    requiredParams: ['id', 'part'],
     pathParams: [],
     context: self
   };
@@ -8202,11 +8195,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveBroadcasts.control = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts/control&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts/control',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;, &#x27;part&#x27;],
+    requiredParams: ['id', 'part'],
     pathParams: [],
     context: self
   };
@@ -8228,11 +8221,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveBroadcasts.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -8254,11 +8247,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveBroadcasts.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8280,11 +8273,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveBroadcasts.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8306,11 +8299,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveBroadcasts.transition = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts/transition&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts/transition',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;broadcastStatus&#x27;, &#x27;id&#x27;, &#x27;part&#x27;],
+    requiredParams: ['broadcastStatus', 'id', 'part'],
     pathParams: [],
     context: self
   };
@@ -8332,11 +8325,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveBroadcasts.update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8358,11 +8351,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveChatBans.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/bans&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/bans',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -8384,11 +8377,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveChatBans.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/bans&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/bans',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8410,11 +8403,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveChatMessages.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/messages&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/messages',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -8436,11 +8429,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveChatMessages.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/messages&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/messages',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8462,11 +8455,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveChatMessages.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/messages&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/messages',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;liveChatId&#x27;, &#x27;part&#x27;],
+    requiredParams: ['liveChatId', 'part'],
     pathParams: [],
     context: self
   };
@@ -8488,11 +8481,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveChatModerators.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/moderators&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/moderators',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -8514,11 +8507,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveChatModerators.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/moderators&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/moderators',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8540,11 +8533,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveChatModerators.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/moderators&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/moderators',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;liveChatId&#x27;, &#x27;part&#x27;],
+    requiredParams: ['liveChatId', 'part'],
     pathParams: [],
     context: self
   };
@@ -8566,11 +8559,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveStreams.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -8592,11 +8585,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveStreams.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8618,11 +8611,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveStreams.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8644,11 +8637,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">liveStreams.update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8670,11 +8663,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">playlistItems.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -8696,11 +8689,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">playlistItems.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8722,11 +8715,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">playlistItems.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8748,11 +8741,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">playlistItems.update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8774,11 +8767,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">playlists.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -8800,11 +8793,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">playlists.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8826,11 +8819,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">playlists.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8852,11 +8845,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">playlists.update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8878,11 +8871,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">search.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/search&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/search',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8904,11 +8897,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">sponsors.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/sponsors&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/sponsors',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8930,11 +8923,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">subscriptions.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/subscriptions&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/subscriptions',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -8956,11 +8949,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">subscriptions.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/subscriptions&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/subscriptions',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -8982,11 +8975,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">subscriptions.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/subscriptions&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/subscriptions',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9008,12 +9001,12 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">thumbnails.set = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/thumbnails/set&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/thumbnails/set',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/thumbnails/set&#x27;,
-    requiredParams: [&#x27;videoId&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/thumbnails/set',
+    requiredParams: ['videoId'],
     pathParams: [],
     context: self
   };
@@ -9050,11 +9043,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">videoAbuseReportReasons.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videoAbuseReportReasons&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videoAbuseReportReasons',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9076,11 +9069,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">videoCategories.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videoCategories&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videoCategories',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9102,11 +9095,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">videos.delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -9128,11 +9121,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">videos.getRating = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos/getRating&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos/getRating',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -9154,12 +9147,12 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">videos.insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/videos&#x27;,
-    requiredParams: [&#x27;part&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/videos',
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9168,20 +9161,20 @@ opn(oauth.generateAuthUrl({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.<span class="apidocCodeKeywordSpan">videos.insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -9197,11 +9190,11 @@ var req = Youtube.<span class="apidocCodeKeywordSpan">videos.insert</span>({
     <li>description and source-code<pre class="apidocCodePre">videos.list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9223,11 +9216,11 @@ var req = Youtube.<span class="apidocCodeKeywordSpan">videos.insert</span>({
     <li>description and source-code<pre class="apidocCodePre">videos.rate = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos/rate&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos/rate',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;, &#x27;rating&#x27;],
+    requiredParams: ['id', 'rating'],
     pathParams: [],
     context: self
   };
@@ -9249,8 +9242,8 @@ var req = Youtube.<span class="apidocCodeKeywordSpan">videos.insert</span>({
     <li>description and source-code<pre class="apidocCodePre">videos.reportAbuse = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos/reportAbuse&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos/reportAbuse',
+      method: 'POST'
     },
     params: params,
     requiredParams: [],
@@ -9275,11 +9268,11 @@ var req = Youtube.<span class="apidocCodeKeywordSpan">videos.insert</span>({
     <li>description and source-code<pre class="apidocCodePre">videos.update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9301,12 +9294,12 @@ var req = Youtube.<span class="apidocCodeKeywordSpan">videos.insert</span>({
     <li>description and source-code<pre class="apidocCodePre">watermarks.set = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/watermarks/set&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/watermarks/set',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/watermarks/set&#x27;,
-    requiredParams: [&#x27;channelId&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/watermarks/set',
+    requiredParams: ['channelId'],
     pathParams: [],
     context: self
   };
@@ -9328,11 +9321,11 @@ var req = Youtube.<span class="apidocCodeKeywordSpan">videos.insert</span>({
     <li>description and source-code<pre class="apidocCodePre">watermarks.unset = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/watermarks/unset&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/watermarks/unset',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;channelId&#x27;],
+    requiredParams: ['channelId'],
     pathParams: [],
     context: self
   };
@@ -9423,11 +9416,11 @@ var req = Youtube.<span class="apidocCodeKeywordSpan">videos.insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/activities&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/activities',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9436,20 +9429,20 @@ var req = Youtube.<span class="apidocCodeKeywordSpan">videos.insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -9465,11 +9458,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/activities&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/activities',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9496,11 +9489,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/activities&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/activities',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9509,20 +9502,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -9543,11 +9536,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/activities&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/activities',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9579,14 +9572,14 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 
     var authObj = null;
     switch (options.type) {
-        case &#x22;oauth&#x22;:
+        case "oauth":
             authObj = new Google.auth.OAuth2(options.client_id, options.client_secret, options.redirect_url);
             authObj.setCredentials({
                 access_token: options.access_token || options.token,
                 refresh_token: options.refresh_token
             });
             break;
-        case &#x22;key&#x22;:
+        case "key":
             authObj = options.key;
             break;
     }
@@ -9597,7 +9590,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     return authObj;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    host: &#x22;localhost&#x22;
+    host: "localhost"
   , port: 5000
 });
 
@@ -9605,7 +9598,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 // You can access the Youtube resources via OAuth2 only.
 // https://developers.google.com/youtube/v3/guides/moving_to_oauth#service_accounts
 let oauth = Youtube.<span class="apidocCodeKeywordSpan">authenticate</span>({
-    type: &#x22;oauth&#x22;
+    type: "oauth"
   , client_id: CREDENTIALS.web.client_id
   , client_secret: CREDENTIALS.web.client_secret
   , redirect_url: CREDENTIALS.web.redirect_uris[0]
@@ -9632,11 +9625,11 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -9658,12 +9651,12 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">download = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions/{id}&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions/{id}',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
-    pathParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
+    pathParams: ['id'],
     context: self
   };
 
@@ -9684,12 +9677,12 @@ opn(oauth.generateAuthUrl({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/captions&#x27;,
-    requiredParams: [&#x27;part&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/captions',
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9698,20 +9691,20 @@ opn(oauth.generateAuthUrl({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -9727,11 +9720,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;, &#x27;videoId&#x27;],
+    requiredParams: ['part', 'videoId'],
     pathParams: [],
     context: self
   };
@@ -9753,12 +9746,12 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'PUT'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/captions&#x27;,
-    requiredParams: [&#x27;part&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/captions',
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9785,11 +9778,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -9816,12 +9809,12 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">download = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions/{id}&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions/{id}',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
-    pathParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
+    pathParams: ['id'],
     context: self
   };
 
@@ -9847,12 +9840,12 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/captions&#x27;,
-    requiredParams: [&#x27;part&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/captions',
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9861,20 +9854,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -9895,11 +9888,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;, &#x27;videoId&#x27;],
+    requiredParams: ['part', 'videoId'],
     pathParams: [],
     context: self
   };
@@ -9926,12 +9919,12 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/captions&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/captions',
+      method: 'PUT'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/captions&#x27;,
-    requiredParams: [&#x27;part&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/captions',
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -9958,11 +9951,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelBanners/insert&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelBanners/insert',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/channelBanners/insert&#x27;,
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/channelBanners/insert',
     requiredParams: [],
     pathParams: [],
     context: self
@@ -9972,20 +9965,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -10006,11 +9999,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelBanners/insert&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelBanners/insert',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/channelBanners/insert&#x27;,
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/channelBanners/insert',
     requiredParams: [],
     pathParams: [],
     context: self
@@ -10020,20 +10013,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -10054,11 +10047,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -10080,11 +10073,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10093,20 +10086,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -10122,11 +10115,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10148,11 +10141,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10179,11 +10172,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -10210,11 +10203,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10223,20 +10216,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -10257,11 +10250,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10288,11 +10281,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channelSections&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channelSections',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10319,11 +10312,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channels&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channels',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10345,11 +10338,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channels&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channels',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10376,11 +10369,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channels&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channels',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10407,11 +10400,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/channels&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/channels',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10438,11 +10431,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/commentThreads&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/commentThreads',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10451,20 +10444,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -10480,11 +10473,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/commentThreads&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/commentThreads',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10506,11 +10499,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/commentThreads&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/commentThreads',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10537,11 +10530,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/commentThreads&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/commentThreads',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10550,20 +10543,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -10584,11 +10577,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/commentThreads&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/commentThreads',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10615,11 +10608,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/commentThreads&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/commentThreads',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10646,11 +10639,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -10672,11 +10665,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10685,20 +10678,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -10714,11 +10707,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10740,11 +10733,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">markAsSpam = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments/markAsSpam&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments/markAsSpam',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -10766,11 +10759,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">setModerationStatus = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments/setModerationStatus&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments/setModerationStatus',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;, &#x27;moderationStatus&#x27;],
+    requiredParams: ['id', 'moderationStatus'],
     pathParams: [],
     context: self
   };
@@ -10792,11 +10785,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10823,11 +10816,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -10854,11 +10847,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10867,20 +10860,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -10901,11 +10894,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -10932,11 +10925,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">markAsSpam = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments/markAsSpam&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments/markAsSpam',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -10963,11 +10956,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">setModerationStatus = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments/setModerationStatus&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments/setModerationStatus',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;, &#x27;moderationStatus&#x27;],
+    requiredParams: ['id', 'moderationStatus'],
     pathParams: [],
     context: self
   };
@@ -10994,11 +10987,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/comments&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/comments',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -11025,11 +11018,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/fanFundingEvents&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/fanFundingEvents',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -11056,11 +11049,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/fanFundingEvents&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/fanFundingEvents',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -12498,7 +12491,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <ul>
     <li>description and source-code<pre class="apidocCodePre">discoverAPI = function (path, options, callback) {
   var self = this;
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     callback = options;
     options = {};
   }
@@ -12511,7 +12504,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     }
     var ep = new Endpoint(options);
     ep.google = self; // for drive.google.transporter
-    return callback(null, Object.freeze(ep)); // create new &#x26; freeze
+    return callback(null, Object.freeze(ep)); // create new &amp; freeze
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -12598,7 +12591,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <ul>
     <li>description and source-code<pre class="apidocCodePre">discoverAPI = function (path, options, callback) {
   var self = this;
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     callback = options;
     options = {};
   }
@@ -12611,7 +12604,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     }
     var ep = new Endpoint(options);
     ep.google = self; // for drive.google.transporter
-    return callback(null, Object.freeze(ep)); // create new &#x26; freeze
+    return callback(null, Object.freeze(ep)); // create new &amp; freeze
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -12890,7 +12883,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
   // Start with an expired refresh token, which will automatically be refreshed
   // before the first API call is made.
   this.credentials = {
-    refresh_token: &#x27;compute-placeholder&#x27;,
+    refresh_token: 'compute-placeholder',
     expiry_date: 1
   };
 
@@ -12919,7 +12912,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
   this.gToken = gToken;
 
   this.credentials = {
-    refresh_token: &#x27;jwt-placeholder&#x27;,
+    refresh_token: 'jwt-placeholder',
     expiry_date: 1
   };
 }</pre></li>
@@ -12943,20 +12936,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_injectErrorMessage = function (err, result, response, callback) {
-  if (response &#x26;&#x26; response.statusCode) {
+  if (response &amp;&amp; response.statusCode) {
     var helpfulMessage = null;
     if (response.statusCode === 403) {
-      helpfulMessage = &#x27;A Forbidden error was returned while attempting to retrieve an access &#x27; +
-        &#x27;token for the Compute Engine built-in service account. This may be because the Compute &#x27; +
-        &#x27;Engine instance does not have the correct permission scopes specified.&#x27;;
+      helpfulMessage = 'A Forbidden error was returned while attempting to retrieve an access ' +
+        'token for the Compute Engine built-in service account. This may be because the Compute ' +
+        'Engine instance does not have the correct permission scopes specified.';
     } else if (response.statusCode === 404) {
-      helpfulMessage = &#x27;A Not Found error was returned while attempting to retrieve an access&#x27; +
-        &#x27;token for the Compute Engine built-in service account. This may be because the Compute &#x27; +
-        &#x27;Engine instance does not have any permission scopes specified.&#x27;;
+      helpfulMessage = 'A Not Found error was returned while attempting to retrieve an access' +
+        'token for the Compute Engine built-in service account. This may be because the Compute ' +
+        'Engine instance does not have any permission scopes specified.';
     }
     if (helpfulMessage) {
-      if (err &#x26;&#x26; err.message) {
-        helpfulMessage += &#x27; &#x27; + err.message;
+      if (err &amp;&amp; err.message) {
+        helpfulMessage += ' ' + err.message;
       }
 
       if (err) {
@@ -12982,7 +12975,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">createScopedRequired = function () {
-  // On compute engine, scopes are specified at the compute instance&#x27;s creation time,
+  // On compute engine, scopes are specified at the compute instance's creation time,
   // and cannot be changed. For this reason, always return false.
   return false;
 }</pre></li>
@@ -13002,11 +12995,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
   var uri = this.opts.tokenUrl || Compute.GOOGLE_OAUTH2_TOKEN_URL_;
   // request for new token
   this.transporter.request({
-    method: &#x27;GET&#x27;,
+    method: 'GET',
     uri: uri,
     json: true
   }, function(err, tokens, response) {
-    if (!err &#x26;&#x26; tokens &#x26;&#x26; tokens.expires_in) {
+    if (!err &amp;&amp; tokens &amp;&amp; tokens.expires_in) {
       tokens.expiry_date = ((new Date()).getTime() + (tokens.expires_in * 1000));
       delete tokens.expires_in;
     }
@@ -13066,7 +13059,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
   that.refreshToken_(null, function(err, result) {
     if (!err) {
       that.credentials = result;
-      that.credentials.refresh_token = &#x27;jwt-placeholder&#x27;;
+      that.credentials.refresh_token = 'jwt-placeholder';
       that.key = that.gtoken.key;
       that.email = that.gtoken.iss;
     }
@@ -13131,17 +13124,17 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
   var done = opt_callback || noop;
   if (!json) {
     done(new Error(
-      &#x27;Must pass in a JSON object containing the service account auth settings.&#x27;));
+      'Must pass in a JSON object containing the service account auth settings.'));
     return;
   }
   if (!json.client_email) {
     done(new Error(
-      &#x27;The incoming JSON object does not contain a client_email field&#x27;));
+      'The incoming JSON object does not contain a client_email field'));
     return;
   }
   if (!json.private_key) {
     done(new Error(
-      &#x27;The incoming JSON object does not contain a private_key field&#x27;));
+      'The incoming JSON object does not contain a private_key field'));
     return;
   }
   // Extract the relevant information from the json key file.
@@ -13169,16 +13162,16 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
   if (!stream) {
     process.nextTick(function() {
       done(
-        new Error(&#x27;Must pass in a stream containing the service account auth settings.&#x27;));
+        new Error('Must pass in a stream containing the service account auth settings.'));
     });
     return;
   }
-  var s = &#x27;&#x27;;
-  stream.setEncoding(&#x27;utf8&#x27;);
-  stream.on(&#x27;data&#x27;, function (chunk) {
+  var s = '';
+  stream.setEncoding('utf8');
+  stream.on('data', function (chunk) {
     s += chunk;
   });
-  stream.on(&#x27;end&#x27;, function () {
+  stream.on('end', function () {
     try {
       var data = JSON.parse(s);
       that.fromJSON(data, opt_callback);
@@ -13200,7 +13193,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getRequestMetadata = function (opt_uri, metadataCb) {
-  if (this.createScopedRequired() &#x26;&#x26; opt_uri) {
+  if (this.createScopedRequired() &amp;&amp; opt_uri) {
     // no scopes have been set, but a uri has been provided.  Use JWTAccess credentials.
     var alt = new JWTAccess(this.email, this.key);
     return alt.getRequestMetadata(opt_uri, metadataCb);
@@ -13231,7 +13224,7 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
       return gToken.getToken(function (err, token) {
         return done(err, {
           access_token: token,
-          token_type: &#x27;Bearer&#x27;,
+          token_type: 'Bearer',
           expiry_date: gToken.expires_at
         });
       });
@@ -14788,11 +14781,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/guideCategories&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/guideCategories',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -14819,11 +14812,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/guideCategories&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/guideCategories',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -14850,11 +14843,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/i18nLanguages&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/i18nLanguages',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -14881,11 +14874,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/i18nLanguages&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/i18nLanguages',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -14912,11 +14905,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/i18nRegions&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/i18nRegions',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -14943,11 +14936,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/i18nRegions&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/i18nRegions',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -14974,11 +14967,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">bind = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts/bind&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts/bind',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;, &#x27;part&#x27;],
+    requiredParams: ['id', 'part'],
     pathParams: [],
     context: self
   };
@@ -15000,11 +14993,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">control = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts/control&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts/control',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;, &#x27;part&#x27;],
+    requiredParams: ['id', 'part'],
     pathParams: [],
     context: self
   };
@@ -15026,11 +15019,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -15052,11 +15045,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15065,20 +15058,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -15094,11 +15087,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15120,11 +15113,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">transition = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts/transition&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts/transition',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;broadcastStatus&#x27;, &#x27;id&#x27;, &#x27;part&#x27;],
+    requiredParams: ['broadcastStatus', 'id', 'part'],
     pathParams: [],
     context: self
   };
@@ -15146,11 +15139,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15195,11 +15188,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">control = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts/control&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts/control',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;, &#x27;part&#x27;],
+    requiredParams: ['id', 'part'],
     pathParams: [],
     context: self
   };
@@ -15226,11 +15219,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -15257,11 +15250,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15270,20 +15263,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -15304,11 +15297,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15335,11 +15328,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">transition = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts/transition&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts/transition',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;broadcastStatus&#x27;, &#x27;id&#x27;, &#x27;part&#x27;],
+    requiredParams: ['broadcastStatus', 'id', 'part'],
     pathParams: [],
     context: self
   };
@@ -15366,11 +15359,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveBroadcasts&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveBroadcasts',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15397,11 +15390,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/bans&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/bans',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -15423,11 +15416,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/bans&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/bans',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15436,20 +15429,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -15470,11 +15463,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/bans&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/bans',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -15501,11 +15494,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/bans&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/bans',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15514,20 +15507,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -15548,11 +15541,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/messages&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/messages',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -15574,11 +15567,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/messages&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/messages',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15587,20 +15580,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -15616,11 +15609,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/messages&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/messages',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;liveChatId&#x27;, &#x27;part&#x27;],
+    requiredParams: ['liveChatId', 'part'],
     pathParams: [],
     context: self
   };
@@ -15647,11 +15640,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/messages&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/messages',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -15678,11 +15671,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/messages&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/messages',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15691,20 +15684,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -15725,11 +15718,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/messages&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/messages',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;liveChatId&#x27;, &#x27;part&#x27;],
+    requiredParams: ['liveChatId', 'part'],
     pathParams: [],
     context: self
   };
@@ -15756,11 +15749,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/moderators&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/moderators',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -15782,11 +15775,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/moderators&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/moderators',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15795,20 +15788,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -15824,11 +15817,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/moderators&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/moderators',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;liveChatId&#x27;, &#x27;part&#x27;],
+    requiredParams: ['liveChatId', 'part'],
     pathParams: [],
     context: self
   };
@@ -15855,11 +15848,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/moderators&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/moderators',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -15886,11 +15879,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/moderators&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/moderators',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -15899,20 +15892,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -15933,11 +15926,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveChat/moderators&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveChat/moderators',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;liveChatId&#x27;, &#x27;part&#x27;],
+    requiredParams: ['liveChatId', 'part'],
     pathParams: [],
     context: self
   };
@@ -15964,11 +15957,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -15990,11 +15983,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16003,20 +15996,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -16032,11 +16025,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16058,11 +16051,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16089,11 +16082,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -16120,11 +16113,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16133,20 +16126,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -16167,11 +16160,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16198,11 +16191,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/liveStreams&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/liveStreams',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16229,11 +16222,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -16255,11 +16248,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16268,20 +16261,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -16297,11 +16290,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16323,11 +16316,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16354,11 +16347,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -16385,11 +16378,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16398,20 +16391,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -16432,11 +16425,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16463,11 +16456,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlistItems&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16494,11 +16487,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -16520,11 +16513,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16533,20 +16526,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -16562,11 +16555,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16588,11 +16581,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16619,11 +16612,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -16650,11 +16643,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16663,20 +16656,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -16697,11 +16690,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16728,11 +16721,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/playlists&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16759,11 +16752,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/search&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/search',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16790,11 +16783,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/search&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/search',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16821,11 +16814,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/sponsors&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/sponsors',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16852,11 +16845,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/sponsors&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/sponsors',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16883,11 +16876,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/subscriptions&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/subscriptions',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -16909,11 +16902,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/subscriptions&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/subscriptions',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16922,20 +16915,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -16951,11 +16944,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/subscriptions&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/subscriptions',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -16982,11 +16975,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/subscriptions&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/subscriptions',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -17013,11 +17006,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/subscriptions&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/subscriptions',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17026,20 +17019,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -17060,11 +17053,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/subscriptions&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/subscriptions',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17091,12 +17084,12 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">set = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/thumbnails/set&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/thumbnails/set',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/thumbnails/set&#x27;,
-    requiredParams: [&#x27;videoId&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/thumbnails/set',
+    requiredParams: ['videoId'],
     pathParams: [],
     context: self
   };
@@ -17123,12 +17116,12 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">set = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/thumbnails/set&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/thumbnails/set',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/thumbnails/set&#x27;,
-    requiredParams: [&#x27;videoId&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/thumbnails/set',
+    requiredParams: ['videoId'],
     pathParams: [],
     context: self
   };
@@ -17173,11 +17166,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videoAbuseReportReasons&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videoAbuseReportReasons',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17204,11 +17197,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videoAbuseReportReasons&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videoAbuseReportReasons',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17235,11 +17228,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videoCategories&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videoCategories',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17266,11 +17259,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videoCategories&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videoCategories',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17297,11 +17290,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -17323,11 +17316,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">getRating = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos/getRating&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos/getRating',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -17349,12 +17342,12 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/videos&#x27;,
-    requiredParams: [&#x27;part&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/videos',
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17363,20 +17356,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -17392,11 +17385,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17418,11 +17411,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">rate = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos/rate&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos/rate',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;, &#x27;rating&#x27;],
+    requiredParams: ['id', 'rating'],
     pathParams: [],
     context: self
   };
@@ -17444,8 +17437,8 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">reportAbuse = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos/reportAbuse&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos/reportAbuse',
+      method: 'POST'
     },
     params: params,
     requiredParams: [],
@@ -17470,11 +17463,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17501,11 +17494,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">delete = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;DELETE&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'DELETE'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -17532,11 +17525,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">getRating = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos/getRating&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos/getRating',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;],
+    requiredParams: ['id'],
     pathParams: [],
     context: self
   };
@@ -17563,12 +17556,12 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">insert = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/videos&#x27;,
-    requiredParams: [&#x27;part&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/videos',
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17577,20 +17570,20 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-Logger.log(&#x22;Got the tokens.&#x22;);
+Logger.log("Got the tokens.");
 
 oauth.setCredentials(tokens);
 
-lien.end(&#x22;The video is being uploaded. Check out the logs in the terminal.&#x22;);
+lien.end("The video is being uploaded. Check out the logs in the terminal.");
 
 var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     resource: {
         // Video title and description
         snippet: {
-            title: &#x22;Testing YoutTube API NodeJS module&#x22;
-          , description: &#x22;Test video upload via YouTube API&#x22;
+            title: "Testing YoutTube API NodeJS module"
+          , description: "Test video upload via YouTube API"
         }
-        // I don&#x27;t want to spam my subscribers
+        // I don't want to spam my subscribers
 ...</pre></li>
     </ul>
 
@@ -17611,11 +17604,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">list = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;GET&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'GET'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17642,11 +17635,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">rate = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos/rate&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos/rate',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;id&#x27;, &#x27;rating&#x27;],
+    requiredParams: ['id', 'rating'],
     pathParams: [],
     context: self
   };
@@ -17673,8 +17666,8 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">reportAbuse = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos/reportAbuse&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos/reportAbuse',
+      method: 'POST'
     },
     params: params,
     requiredParams: [],
@@ -17704,11 +17697,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">update = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/videos&#x27;,
-      method: &#x27;PUT&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/videos',
+      method: 'PUT'
     },
     params: params,
-    requiredParams: [&#x27;part&#x27;],
+    requiredParams: ['part'],
     pathParams: [],
     context: self
   };
@@ -17735,12 +17728,12 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">set = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/watermarks/set&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/watermarks/set',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/watermarks/set&#x27;,
-    requiredParams: [&#x27;channelId&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/watermarks/set',
+    requiredParams: ['channelId'],
     pathParams: [],
     context: self
   };
@@ -17762,11 +17755,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">unset = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/watermarks/unset&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/watermarks/unset',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;channelId&#x27;],
+    requiredParams: ['channelId'],
     pathParams: [],
     context: self
   };
@@ -17793,12 +17786,12 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">set = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/watermarks/set&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/watermarks/set',
+      method: 'POST'
     },
     params: params,
-    mediaUrl: &#x27;https://www.googleapis.com/upload/youtube/v3/watermarks/set&#x27;,
-    requiredParams: [&#x27;channelId&#x27;],
+    mediaUrl: 'https://www.googleapis.com/upload/youtube/v3/watermarks/set',
+    requiredParams: ['channelId'],
     pathParams: [],
     context: self
   };
@@ -17825,11 +17818,11 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     <li>description and source-code<pre class="apidocCodePre">unset = function (params, callback) {
   var parameters = {
     options: {
-      url: &#x27;https://www.googleapis.com/youtube/v3/watermarks/unset&#x27;,
-      method: &#x27;POST&#x27;
+      url: 'https://www.googleapis.com/youtube/v3/watermarks/unset',
+      method: 'POST'
     },
     params: params,
-    requiredParams: [&#x27;channelId&#x27;],
+    requiredParams: ['channelId'],
     pathParams: [],
     context: self
   };
@@ -17848,3 +17841,4 @@ var req = Youtube.videos.<span class="apidocCodeKeywordSpan">insert</span>({
     ]
 </div>
 </div>
+</body></html>
