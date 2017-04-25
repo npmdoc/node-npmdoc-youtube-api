@@ -1,4 +1,7 @@
-# api documentation for  [youtube-api (v2.0.8)](https://github.com/IonicaBizau/youtube-api)  [![npm package](https://img.shields.io/npm/v/npmdoc-youtube-api.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-youtube-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-youtube-api.svg)](https://travis-ci.org/npmdoc/node-npmdoc-youtube-api)
+# npmdoc-youtube-api
+
+#### basic api documentation for  [youtube-api (v2.0.8)](https://github.com/IonicaBizau/youtube-api)  [![npm package](https://img.shields.io/npm/v/npmdoc-youtube-api.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-youtube-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-youtube-api.svg)](https://travis-ci.org/npmdoc/node-npmdoc-youtube-api)
+
 #### A Node.JS module, which provides an object oriented wrapper for the Youtube v3 API.
 
 [![NPM](https://nodei.co/npm/youtube-api.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/youtube-api)
@@ -174,7 +177,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "version": "2.0.8"
+    "version": "2.0.8",
+    "bin": {}
 }
 ```
 
